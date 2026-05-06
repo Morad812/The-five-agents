@@ -7,6 +7,7 @@
 - [[agent-reuven]] — סוכן המנכ"ל (CEO Orchestrator): מנהל פייפליין טורי של 4 סוכני משנה
 - [[yuval-image-agent]] — סוכן קריאייטיב ליצירת תמונות: workflow, reference/, outputs/, gpt-image-gen skill
 - [[agent-yael]] — סוכנת כתיבת תוכן LLM-only: שכתוב מאמרים, IMAGE_NEEDED placeholders, Content/ → Output/
+- [[agent-chen]] — סוכנת מחקר רשת: מוצאת מקורות, מסננת לפי איכות, מכינה קלט ליעל ב-Content/
 - [[project-documentation-mapping]] — מיפוי מלא של כל קבצי הפרויקט לקבצי vault; session יצירת ה-vault
 - [[project-config-files]] — CLAUDE.md, .env, .gitignore, .obsidian/, .claude/ (תשתית הפרויקט)
 - [[skill-brainstorming]] — סקיל: חקירת כוונת משתמש ועיצוב לפני מימוש; כולל Visual Companion

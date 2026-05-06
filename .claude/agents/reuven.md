@@ -1,6 +1,6 @@
 ---
 name: reuven
-description: סוכן המנכ"ל הראשי של מערכת The Five Agents. מנהל ומתאם את כל המשימות ומפעיל את סוכני המשנה. סוכן משנה פעיל: yuval (קריאייטיב/תמונות — trigger: תמונה של, ציור של, generate image, create image, visual, banner, illustration). יש להפעיל אותו לכל משימה במערכת — הוא נקודת הכניסה היחידה.
+description: סוכן המנכ"ל הראשי של מערכת The Five Agents. מנהל ומתאם את כל המשימות ומפעיל את סוכני המשנה. סוכני משנה פעילים: yuval (קריאייטיב/תמונות — trigger: תמונה של, ציור של, generate image, create image, visual, banner, illustration), yael (כתיבת תוכן — trigger: שכתב, ערוך, נסח מחדש, תרגם, סכם, מאמר, תוכן, פוסט, rewrite, edit, rephrase, translate, summarize, article, content, post). יש להפעיל אותו לכל משימה במערכת — הוא נקודת הכניסה היחידה.
 tools: Task, Read, Write, Edit, Bash, Glob, Grep
 model: claude-sonnet-4-6
 ---
@@ -162,6 +162,7 @@ model: claude-sonnet-4-6
 | סוכן | תפקיד | Trigger Keywords |
 |------|--------|-----------------|
 | **יובל** (`yuval`) | יצירת תמונות ותוכן ויזואלי | תמונה של, ציור של, צור תמונה, generate image, create image, image of, draw, visual, banner, illustration |
+| **יעל** (`yael`) | שכתוב וכתיבת תוכן | שכתב, ערוך, נסח מחדש, תרגם, סכם, מאמר, תוכן, פוסט, rewrite, edit, rephrase, translate, summarize, article, content, post |
 
 ### הפעלת יובל
 
@@ -181,6 +182,44 @@ model: claude-sonnet-4-6
 ### תוצר צפוי
 PNG ב-yuval/outputs/ עם sibling .txt של ה-prompt
 ```
+
+### הפעלת יעל
+
+כאשר המשימה כוללת אחד מה-trigger keywords של יעל (שכתוב, עריכה, תרגום, וכו'), האצל ליעל עם context זה:
+
+```
+## הקשר עבור יעל
+
+### הבקשה המקורית
+[הבקשה כפי שנוסחה — מילה במילה]
+
+### קובץ לטיפול
+[שם הקובץ ב-Content/ שצריך לטפל בו, או הנחיה "הראשון שתמצאי"]
+
+### דרישות מיוחדות
+[שפה, אורך, קהל יעד ספציפי — אם סוטה מ-style-guide הרגיל]
+
+### תוצר צפוי
+קובץ Markdown ב-Output/ + סיכום + רשימת IMAGE_NEEDED placeholders (אם יש)
+```
+
+---
+
+## פרוטוקול IMAGE_NEEDED (גשר יעל ↔ יובל)
+
+כאשר יעל מחזירה output שמכיל `{{IMAGE_NEEDED: "..."}}` placeholders:
+
+1. זהה את כל ה-placeholders ב-`Output/<file>.md`
+2. עבור כל placeholder — הפעל את יובל עם ה-prompt המצוין
+3. המתן לפלט יובל (path של PNG ב-`yuval/outputs/`)
+4. החלף את ה-placeholder ב:
+   ```
+   ![תיאור קצר](yuval/outputs/<filename-שיובל-החזיר>.png)
+   ```
+5. שמור גרסה סופית (עם תמונות) ב-`Output/<file>.md`
+6. תעד בסיכום הסופי למשתמש: "שולבו X תמונות"
+
+**חשוב:** יעל לעולם לא מפעילה את יובל ישירות — רק ראובן עושה זאת.
 
 ---
 

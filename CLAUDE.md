@@ -16,6 +16,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ה-vault נמצא ב-`vault/` — ארבע תיקיות: `Meeting Notes/`, `Content Briefs/`, `Publishing Log/`, `Brand Guidelines/`.
 
+## ניתוב משימות — ראובן
+
+**כל משימה במערכת חייבת לעבור דרך ראובן (סוכן המנכ"ל).**
+אל תבצע משימות ישירות — הפעל תמיד את הסוכן `reuven` מ-`.claude/agents/reuven.md`.
+
 ## Project Structure
 
 ```

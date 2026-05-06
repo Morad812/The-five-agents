@@ -4,7 +4,8 @@
 
 ## Topics
 
-- [[agent-reuven]] — סוכן המנכ"ל (CEO Orchestrator): מנהל פייפליין טורי של 4 סוכני משנה
+- [[agent-reuven]] — סוכן המנכ"ל (CEO Orchestrator): מנהל פייפליין טורי של 5 סוכני משנה
+- [[guy-qa-agent]] — סוכן ה-QA: בודק תוצרים, מאשר/דוחה לפני שיוצא למשתמש, מנהל לולאת retry עם ראובן
 - [[yuval-image-agent]] — סוכן קריאייטיב ליצירת תמונות: workflow, reference/, outputs/, gpt-image-gen skill
 - [[agent-yael]] — סוכנת כתיבת תוכן LLM-only: שכתוב מאמרים, IMAGE_NEEDED placeholders, Content/ → Output/
 - [[agent-chen]] — סוכנת מחקר רשת: מוצאת מקורות, מסננת לפי איכות, מכינה קלט ליעל ב-Content/

@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '{\"hookSpecificOutput\": {\"hookEventName\": \"SessionStart\", \"additionalContext\": \"MANDATORY: Before doing anything else in this session, invoke the obsidian-vault-workflow skill. This is required at the start of every session and before every task.\"}}'",
+            "statusMessage": "Loading Obsidian vault workflow..."
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -5,6 +5,7 @@
 ## Topics
 
 - [[agent-reuven]] — סוכן המנכ"ל (CEO Orchestrator): מנהל פייפליין טורי של 4 סוכני משנה
+- [[yuval-image-agent]] — סוכן קריאייטיב ליצירת תמונות: workflow, reference/, outputs/, gpt-image-gen skill
 - [[project-documentation-mapping]] — מיפוי מלא של כל קבצי הפרויקט לקבצי vault; session יצירת ה-vault
 - [[project-config-files]] — CLAUDE.md, .env, .gitignore, .obsidian/, .claude/ (תשתית הפרויקט)
 - [[skill-brainstorming]] — סקיל: חקירת כוונת משתמש ועיצוב לפני מימוש; כולל Visual Companion
